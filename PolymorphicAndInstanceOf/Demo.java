@@ -1,21 +1,20 @@
 package Jobsheet_11.PolymorphicAndInstanceOf;
 
+import Jobsheet_11.Heterogenous.Dosen;
+
 public class Demo {
     public static void main(String[] args) {
-        Dosen dosen1 = new Dosen("19940201", "Widia, S.Kom. M.Kom", "199402");
-        TenagaKependidikan tendik1 = new TenagaKependidikan("19750301", "Aida, A.Md.", "Tenaga Administrasi");
+        //Instansiasi object dari class Dosen
+        Pegawai pegawai = new Dosen("12345", "James William", "12274");
 
-        train(dosen1);
-        train(tendik1);
-    }
-
-    public static void train(Pegawai pegawai) {
-        pegawai.displayInfo();
-        System.out.println("Mengenalkan lingkungan kampus");
-        System.out.println("Menginfokan SOP/Juknis");
-
+        //Cek apakah pegawai sebenarnya instance dari Dosen sebelum melakukan downcasting
         if (pegawai instanceof Dosen) {
-            System.out.println("Memberikan pelatihan pedagogik");
+            //Downcasting ke tipe Dosen
+            Dosen dosen = (Dosen) pegawai;
+            dosen.displayInfo();
+            dosen.mengajar();
+        } else {
+            System.out.println("Downcasting gagal. Pegawai bukan instance dari Dosen.");
         }
     }
 }
