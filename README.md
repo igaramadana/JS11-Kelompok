@@ -291,11 +291,11 @@ Pegawai pegawai1 = (Pegawai) new Dosen();
 object bertipe Dosen. Apakah hal ini dapat dilakukan? Lakukan percobaan untuk
 membuktikannya. 
 
-### Jawaban
-1.  Tidak, upcasting hanya dapat dilakukan jika kedua class memiliki relasi inheritance. Artinya, satu class harus menjadi subclass dari class lain. Jika tidak ada relasi inheritance, upcasting tidak dapat dilakukan.
+### Jawaban:
+1.  Tidak, karena upcasting hanya dapat dilakukan jika kedua class memiliki relasi inheritance. Artinya, satu class harus menjadi subclass dari class lain. Jika tidak ada relasi inheritance, upcasting tidak dapat dilakukan.
 2. Kedua baris kode tersebut melakukan upcasting dengan cara yang benar. Dalam Java, keduanya adalah cara yang valid untuk melakukan upcasting dari Dosen ke Pegawai. Upcasting secara implisit terjadi pada baris pertama dan secara eksplisit pada baris kedua, tetapi keduanya menghasilkan hasil yang sama.
 3. Keyword instanceof digunakan untuk memeriksa apakah suatu object adalah instance dari suatu class atau subclass tertentu. Ini berguna untuk verifikasi tipe sebelum melakukan downcasting atau saat ingin memastikan jenis object yang sedang dihadapi.
-4. Heterogeneous collection adalah koleksi yang dapat menyimpan berbagai tipe object yang berbeda dalam satu wadah. Misalnya, sebuah ArrayList di Java bisa menyimpan object dari tipe String, Integer, dan Pegawai sekaligus.
+4. Heterogeneous collection adalah koleksi yang dapat menyimpan berbagai tipe data yang berbeda dalam satu wadah sehingga lebih mudah dalam mengelola data. Misalnya, sebuah ArrayList di Java bisa menyimpan object dari tipe String, Integer, dan Pegawai sekaligus.
 5. Ya, hal ini dapat dilakukan jika object asli adalah instance dari class Dosen. Jika tidak, akan terjadi ClassCastException. Berikut adalah contoh kode untuk melakukan downcasting:
 ```java
 Pegawai pegawai = new Dosen(); // Instansiasi object dari class Dosen
